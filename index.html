@@ -22,7 +22,7 @@
     <section id="home-screen" class=" min-h-screen text-white flex justify-center items-center ">
         <div class="flex flex-col items-center gap-10">
             <h1 class="text-9xl Anton-font uppercase">Alpha Clash Pro</h1>
-            <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <p>Unleash Your Keyboard Kong Fu : Press “Enter” to Play</p>
             <button onclick="play()" class="btn bg-orange-600 text-black border-none">Play Now</button>
         </div>
     </section>
@@ -81,14 +81,14 @@
                 <button class="btn bg-[#894189] text-white text-xl rounded-full px-4 ">
                     Life
                     <img src="alphabet-clash-pro-resources-main/images/heart.svg" alt="">
-                    <span>1</span>
+                    <span id="current-life">5</span>
                     
                   </button>
 
                   <button class="btn bg-blue-700 text-white text-xl rounded-full px-4">
                     Score
                     <img src="alphabet-clash-pro-resources-main/images/life.svg" alt="">
-                    <span>1</span>
+                    <span id="current-score">0</span>
                   </button>
             </div>
         </div>
@@ -97,11 +97,11 @@
         <!-- play-ground start -->
 
         <!-- Final Score -->
-    <section class="score hidden flex justify-center min-h-screen items-center">
+    <section id="score-section" class="score hidden flex justify-center min-h-screen items-center">
         <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
             <h1 class="text-8xl">
                 <span>score:</span>
-                <span>1</span>
+                <span id="score-deshbord">0</span>
             </h1>
             <button class="btn">Play Again</button>
             <p>Practice will make you Pro</p>

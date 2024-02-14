@@ -30,3 +30,11 @@ function removeBgColorById(elementId) {
     const element= document.getElementById(elementId)
     element.classList.remove("bg-[#FFA500]")
  }
+
+//  get value use Id
+function getElementValuebyId(elementId) {
+    const element=document.getElementById(elementId)
+        const elemenetValueText=element.innerText;
+        const Value =parseInt(elemenetValueText)
+        return Value
+}
