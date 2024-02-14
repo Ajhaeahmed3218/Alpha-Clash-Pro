@@ -23,7 +23,7 @@
         <div class="flex flex-col items-center gap-10">
             <h1 class="text-9xl Anton-font uppercase">Alpha Clash Pro</h1>
             <p>Unleash Your Keyboard Kong Fu : Press “Enter” to Play</p>
-            <button onclick="play()" class="btn bg-orange-600 text-black border-none">Play Now</button>
+            <button onclick="play()" class="btn bg-orange-600 text-white border-none">Play Now</button>
         </div>
     </section>
 
@@ -99,11 +99,12 @@
         <!-- Final Score -->
     <section id="score-section" class="score hidden flex justify-center min-h-screen items-center">
         <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+            <h1 class="text-3xl">Game Over !</h1>
             <h1 class="text-8xl">
                 <span>score:</span>
                 <span id="score-deshbord">0</span>
             </h1>
-            <button class="btn">Play Again</button>
+            <button onclick="restert()" class="btn bg-orange-600 border-none text-white">Play Again</button>
             <p>Practice will make you Pro</p>
         </div>
     </section>

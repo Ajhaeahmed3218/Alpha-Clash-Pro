@@ -1,6 +1,14 @@
 function handleKeybordButtonPress(e) {
     const playerPressed = e.key
-    // console.log("Player Pressed",playerPressed );
+    console.log("Player Pressed",playerPressed );
+
+    // stop the game 
+    if (playerPressed === "Escape") {
+            hiddenElementById("play-ground")
+            showElementById("score-section")
+            const score = getElementValuebyId("current-score")
+            setTextElementValuebyId("score-deshbord", score)
+    }
 
     const currentAlphabetElement=document.getElementById("current-alphabet")
     const currentAlphabet =currentAlphabetElement.innerText
@@ -24,19 +32,25 @@ function handleKeybordButtonPress(e) {
         setTextElementValuebyId("current-life", removeLife)
 
         
-        // if (newLife <= 0) {
-        //     hiddenElementById("play-ground")
-        //     showElementById("score-section")
-        //     const currentScoreElement=document.getElementById("current-score")
-        //     const currentScoreText=currentScoreElement.innerText;
-        //     const scoreDeshbord = document.getElementById("score-deshbord")
-        //     scoreDeshbord.innerText=currentLifeText
-        //     // console.log(currentLifeText);
-        // }
+        if (removeLife <= 0) {
+            hiddenElementById("play-ground")
+            showElementById("score-section")
+            const score = getElementValuebyId("current-score")
+            setTextElementValuebyId("score-deshbord", score)
+            
+        }
 
         
     }
 
+}
+
+// newly start game 
+function restert() {
+    hiddenElementById("score-section")
+    showElementById("play-ground")
+    setTextElementValuebyId("current-life",5)
+    setTextElementValuebyId("current-score",0)
 }
 
 document.addEventListener("keyup", handleKeybordButtonPress)
