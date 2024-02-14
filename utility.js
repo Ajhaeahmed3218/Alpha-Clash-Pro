@@ -24,5 +24,9 @@ function getARendomAlphabet() {
 
 function setBgColorById(elementId) {
    const element= document.getElementById(elementId)
-   element.style.background="#FFA500"
+   element.classList.add("bg-[#FFA500]")
 }
+function removeBgColorById(elementId) {
+    const element= document.getElementById(elementId)
+    element.classList.remove("bg-[#FFA500]")
+ }
