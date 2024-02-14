@@ -38,3 +38,10 @@ function getElementValuebyId(elementId) {
         const Value =parseInt(elemenetValueText)
         return Value
 }
+
+
+//  set text value use Id
+function setTextElementValuebyId(elementId, value  ) {
+    const element=document.getElementById(elementId)
+    element.innerText=value
+}
